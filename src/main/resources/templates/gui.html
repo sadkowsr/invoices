@@ -27,6 +27,9 @@
         <td th:text="${invoice.price}"></td>
         <td th:text="${invoice.date}"></td>
         <td th:text="${invoice.name}"></td>
+        <td>
+            <a th:href="@{/delete(id=${invoice.id})}" class="btn btn-danger">DELETE</a>
+        </td>
     </tr>
     </tbody>
 </table>
