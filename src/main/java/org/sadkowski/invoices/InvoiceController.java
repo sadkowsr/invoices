@@ -3,6 +3,8 @@ package org.sadkowski.invoices;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
@@ -20,5 +22,12 @@ public class InvoiceController {
         List<Invoice> allInvoices = invoiceService.getAllInvoices();
         model.addAttribute("allInvoices",allInvoices);
         return "gui";
+    }
+
+    @PostMapping("/save")
+    public String saveInvoice(@ModelAttribute Invoice invoice){
+        invoiceService.saveInvoice(invoice);
+        return "redirect:/";
+
     }
 }

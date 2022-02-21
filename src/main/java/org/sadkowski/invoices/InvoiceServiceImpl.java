@@ -17,12 +17,12 @@ public class InvoiceServiceImpl implements InvoiceService{
 
         invoiceList.add(new Invoice(1L,
                 BigDecimal.valueOf(100),
-                LocalDate.of(2022,02,18),
+                LocalDate.of(2022,2,18),
                 "Tool1" ));
 
         invoiceList.add(new Invoice(2L,
                 BigDecimal.valueOf(200),
-                LocalDate.of(2032,02,18),
+                LocalDate.of(2032,2,18),
                 "Tool2" ));
     }
 
@@ -46,4 +46,8 @@ public class InvoiceServiceImpl implements InvoiceService{
     invoiceList.set(index, newInvoice);
     }
 
+    @Override
+    public void saveInvoice(Invoice invoice) {
+        invoiceList.add(invoice);
+    }
 }

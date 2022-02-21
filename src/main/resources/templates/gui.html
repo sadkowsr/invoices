@@ -30,5 +30,33 @@
     </tr>
     </tbody>
 </table>
+
+<h1>Add new incoice</h1>
+<form th:action="@{/save}" method="post">
+    <div class="mb-3">
+        <label for="id" class="form-label">id</label>
+        <input type="text" class="form-control" name="id" id="id" >
+    </div>
+
+    <div class="mb-3">
+        <label for="price" class="form-label">price</label>
+        <input type="text" class="form-control" name="price" id="price" >
+    </div>
+
+    <div class="mb-3">
+        <label for="date" class="form-label">date</label>
+        <input type="text" class="form-control" name="date" id="date" >
+    </div>
+
+    <div class="mb-3">
+        <label for="name" class="form-label">name</label>
+        <input type="text" class="form-control" name="name" id="name" >
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+
 </body>
 </html>

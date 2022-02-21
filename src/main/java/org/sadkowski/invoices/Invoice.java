@@ -1,5 +1,7 @@
 package org.sadkowski.invoices;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
@@ -7,6 +9,7 @@ public class Invoice {
 
     private Long id;
     private BigDecimal price;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate date;
     private String name;
 
